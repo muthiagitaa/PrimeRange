@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#include <iostream>
+using namespace std;
+using namespace std;
+int isprima(int n)
+{
+int li;
+if (n == 2)
+return 1;
+if (n % 2 == 0 || n == 1)
+return 0;
+for(li = 3;li <= sqrt(n);li+=2)
+{
+if (n%li == 0)
+return 0;
+}
+return 1;
+}
+int main()
+{
+int li,banyak,awal,akhir;
+banyak = 0;
+cout<<"Masukkan angka awal : ";cin>>awal;
+cout<<"Masukkan angka akhir : ";cin>>akhir;
+cout<<endl<<"Bilangan Prima dari "<<awal<<" hingga "<<akhir<<" adalah:"<<endl;
+for(li = awal;li<=akhir;li+=2)
+if (isprima(li))
+{
+   cout<<li<<" | ";
+   banyak+=1;
+   if (banyak % 5 == 0)
+      cout<<endl;
+}
+cout<<endl<<endl<<"banyak bilangan prima = "<<banyak;
+getch();
+}
