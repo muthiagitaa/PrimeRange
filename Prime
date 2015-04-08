@@ -24,7 +24,6 @@ int li,banyak,awal,akhir;
 banyak = 0;
 cout<<"Masukkan angka awal : ";cin>>awal;
 cout<<"Masukkan angka akhir : ";cin>>akhir;
-cout<<endl<<"Bilangan Prima dari "<<awal<<" hingga "<<akhir<<" adalah:"<<endl;
 for(li = awal;li<=akhir;li+=2)
 if (isprima(li))
 {
